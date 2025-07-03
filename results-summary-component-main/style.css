@@ -1,0 +1,31 @@
+:root {
+  --clr-primary-400: hsl(0, 100%, 67%);
+  --clr-primary-500: hsl(39, 100%, 56%);
+  --clr-primary-600: hsl(166, 100%, 37%);
+  --clr-primary-700: hsl(234, 85%, 45%);
+
+  --clr-primary-gradient-400: hsl(252, 100%, 67%);
+  --clr-primary-gradient-500: hsl(241, 81%, 54%);
+
+  --clr-secondary-gradient-400: hsla(256, 72%, 46%, 1);
+  --clr-secondary-gradient-500: hsla(241, 72%, 46%, 0);
+
+  --gradient-primary: linear-gradient(
+    var(--clr-primary-gradient-400),
+    var(--clr-primary-gradient-500)
+  );
+  --gradient-secondary: linear-gradient(
+    var(--clr-secondary-gradient-400),
+    var(--clr-secondary-gradient-500)
+  );
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(221, 100%, 96%);
+  --clr-neutral-400: hsl(241, 100%, 89%);
+  --clr-neutral-900: hsl(224, 30%, 27%);
+
+  --ff-base: "Hanken Grotesk", sans-serif;
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-bolder: 800;
+}
