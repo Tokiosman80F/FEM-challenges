@@ -28,4 +28,218 @@
   --fw-regular: 500;
   --fw-bold: 700;
   --fw-bolder: 800;
+
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+  --fs-900: 5rem;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+/* Utilities */
+.grid-flow {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+.flex-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+/* General Setting */
+body {
+  color: var(--clr-neutral-400);
+  font-family: var(--ff-base);
+  font-size: var(--fs-400);
+  background-color: var(--clr-neutral-300);
+}
+
+@media (min-width: 600px) {
+  body {
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+  }
+}
+
+.result-summary {
+  --padding: 2.5rem;
+  --border-radius: 2rem;
+}
+
+.result {
+  background: var(--gradient-primary);
+  text-align: center;
+  padding: var(--padding);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+.result__title {
+  font-size: var(--fs-600);
+}
+.result__score {
+  display: grid;
+  place-content: center;
+  width: 12rem;
+  margin-inline: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: var(--gradient-secondary);
+}
+.result__score span {
+  display: block;
+  font-size: var(--fs-900);
+  font-weight: var(--fw-bolder);
+  color: var(--clr-neutral-100);
+  line-height: 1;
+}
+.result__rank {
+  font-size: var(--fs-700);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bolder);
+}
+
+.summary {
+  padding: var(--padding);
+  background-color: white;
+}
+.summary__title {
+  font-size: var(--fs-600);
+  color: var(--clr-neutral-900);
+}
+.summary__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.summary__item[data-item-type="accent-1"] {
+  background-color: color-mix(in srgb, var(--clr-primary-400) 10%, transparent);
+}
+.summary__item[data-item-type="accent-1"] .summary__item-title {
+  color: var(--clr-primary-400);
+}
+
+.summary__item[data-item-type="accent-2"] {
+  background-color: color-mix(in srgb, var(--clr-primary-500) 10%, transparent);
+}
+.summary__item[data-item-type="accent-2"] .summary__item-title {
+  color: var(--clr-primary-500);
+}
+
+.summary__item[data-item-type="accent-3"] {
+  background-color: color-mix(in srgb, var(--clr-primary-600) 10%, transparent);
+}
+.summary__item[data-item-type="accent-3"] .summary__item-title {
+  color: var(--clr-primary-600);
+}
+
+.summary__item[data-item-type="accent-4"] {
+  background-color: color-mix(in srgb, var(--clr-primary-700) 10%, transparent);
+}
+.summary__item[data-item-type="accent-4"] .summary__item-title {
+  color: var(--clr-primary-700);
+}
+
+.summary__score {
+  font-weight: var(--fw-bold);
+}
+.summary__score span {
+  color: var(--clr-neutral-900);
+}
+.button {
+  border: 0px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 100vw;
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-100);
+  background: var(--gradient-primary);
+}
+.button:is(:hover, :focus) {
+  background: var(--clr-neutral-900);
+}
+
+@media (min-width: 600px) {
+  .result-summary {
+    display: grid;
+    max-width: 600px;
+    grid-template-columns: 1fr 1fr;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0.5rem 1rem 3rem var(--clr-neutral-400);
+  }
+  .result {
+    border-radius: var(--border-radius);
+  }
 }

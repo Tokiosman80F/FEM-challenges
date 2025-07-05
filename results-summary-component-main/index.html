@@ -25,7 +25,7 @@
   <body>
     <main>
       <div class="result-summary">
-        <div class="result">
+        <div class="result grid-flow">
           <h1 class="result__title">Your Result</h1>
           <p class="result__score">
             <span>76</span>
@@ -40,44 +40,43 @@
           </div>
         </div>
 
-        <div class="summary">
+        <div class="summary grid-flow">
           <h1 class="summary__title">Summary</h1>
-          <div class="grid-flow">
-            <!-- Reaction -->
-            <div class="summary__item" data-item-type="accent-1">
-              <div class="flex-group">
-                <img src="assets/images/icon-reaction.svg" alt="" />
-                <div class="summary__item-title">Reaction</div>
-              </div>
-              <div class="summary__score"><span> 80 </span>/ 100</div>
-            </div>
-            <!-- Memory -->
-            <div class="summary__item" data-item-type="accent">
-              <div class="flex-group">
-                <img src="assets/images/icon-memory.svg" alt="" />
-                <div class="summary__item-title">Memory</div>
-              </div>
 
-              <div class="summary__score"><span>92</span> / 100</div>
+          <!-- Reaction -->
+          <div class="summary__item" data-item-type="accent-1">
+            <div class="flex-group">
+              <img src="assets/images/icon-reaction.svg" alt="" />
+              <div class="summary__item-title">Reaction</div>
             </div>
-            <!-- Verbal -->
-            <div class="summary__item" data-item-type="accent">
-              <div class="flex-group">
-                <img src="" alt="" />
-                <div class="summary__item-title">Verbal</div>
-              </div>
+            <div class="summary__score"><span> 80 </span>/ 100</div>
+          </div>
+          <!-- Memory -->
+          <div class="summary__item" data-item-type="accent-2">
+            <div class="flex-group">
+              <img src="assets/images/icon-memory.svg" alt="" />
+              <div class="summary__item-title">Memory</div>
+            </div>
 
-              <div class="summary__score"><span> 61 </span>/ 100</div>
+            <div class="summary__score"><span>92</span> / 100</div>
+          </div>
+          <!-- Verbal -->
+          <div class="summary__item" data-item-type="accent-3">
+            <div class="flex-group">
+              <img src="assets/images/icon-verbal.svg" alt="" />
+              <div class="summary__item-title">Verbal</div>
             </div>
-            <!-- Visual -->
-            <div class="summary__item" data-item-type="accent">
-              <div class="flex-group">
-                <img src="" alt="" />
-                <div class="summary__item-title">Visual</div>
-              </div>
 
-              <div class="summary__score"><span>72</span> / 100</div>
+            <div class="summary__score"><span> 61 </span>/ 100</div>
+          </div>
+          <!-- Visual -->
+          <div class="summary__item" data-item-type="accent-4">
+            <div class="flex-group">
+              <img src="assets/images/icon-visual.svg" alt="" />
+              <div class="summary__item-title">Visual</div>
             </div>
+
+            <div class="summary__score"><span>72</span> / 100</div>
           </div>
 
           <button class="button">Continue</button>
