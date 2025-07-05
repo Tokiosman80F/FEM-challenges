@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://resplendent-cassata-8f9820.netlify.app/)
+- Live Site URL: [Result-Summary-Component](https://resplendent-cassata-8f9820.netlify.app/)
 
 ## My process
 
